@@ -1,71 +1,3495 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Shivam Kokat — Python Full Stack Developer portfolio">
-<title>Shivam Kokat | Python Full Stack Developer</title>
-<style>
-:root{--bg:#07111f;--card:#0d1b2e;--card2:#10223a;--text:#eef5ff;--muted:#a9b8cb;--line:#203750;--a:#66bbff;--b:#9185ff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#07111f,#091426,#07111f);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(92%,1120px);margin:auto}
-nav{position:sticky;top:0;z-index:5;background:#07111fd9;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:800}.logo span{color:var(--a)}.links{display:flex;gap:25px;color:var(--muted);font-size:14px}.links a:hover{color:#fff}
-.hero{padding:105px 0 90px;border-bottom:1px solid var(--line)}.pill{display:inline-block;padding:7px 12px;border:1px solid #294765;border-radius:999px;color:#c5def5;background:#0b1b2d;font-size:13px;margin-bottom:20px}h1{font-size:clamp(43px,7vw,78px);line-height:1.02;letter-spacing:-2.5px;max-width:950px;margin:0}.grad{background:linear-gradient(90deg,#fff,#8dcaff,#a99cff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:790px;color:var(--muted);font-size:18px;margin:24px 0 30px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;padding:12px 18px;border-radius:10px;border:1px solid var(--line);background:#0d2036;font-weight:700;font-size:14px}.primary{background:linear-gradient(135deg,#66bbff,#8c82ff);color:#06101c;border:0}
-section{padding:80px 0;border-bottom:1px solid var(--line)}.eyebrow{color:var(--a);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:9px}h2{font-size:36px;letter-spacing:-1px;margin:0 0 14px}.lead{color:var(--muted);max-width:820px}
-.about{display:grid;grid-template-columns:1.4fr .8fr;gap:18px;margin-top:28px}.card{background:linear-gradient(180deg,#102039,#0b1a2d);border:1px solid var(--line);border-radius:16px;padding:24px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}.stat strong{display:block;font-size:25px}.stat span{color:var(--muted);font-size:13px}
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.skill h3{font-size:16px;margin:0 0 13px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{padding:7px 10px;border:1px solid #29435f;background:#09192b;border-radius:8px;color:#cbd9e8;font-size:13px}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.project{min-height:285px;display:flex;flex-direction:column}.project h3{font-size:21px;margin:0 0 9px}.project p{color:var(--muted);font-size:14px}.tags{margin-top:auto;padding-top:18px;color:#a9d5ff;font-size:12px}
-.timeline{margin-top:28px;border-left:1px solid #31506e;padding-left:24px}.item{position:relative;margin-bottom:28px}.item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--a);left:-29px;top:10px}.meta{color:var(--a);font-size:13px;font-weight:700}.item h3{margin:4px 0}.item p{color:var(--muted);font-size:14px}
-.contacts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.contact small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:1.3px;font-size:11px;margin-bottom:5px}.contact a{color:#cfe7ff;word-break:break-word}
-footer{text-align:center;color:var(--muted);font-size:13px;padding:28px 0}
-@media(max-width:800px){.links{display:none}.about,.skills,.projects,.contacts{grid-template-columns:1fr}.hero{padding-top:75px}h1{font-size:48px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Shivam Kokat — Full Stack Developer specializing in Python, React, AI/LLM, Microservices and Cloud."
+  />
+
+  <meta
+    name="keywords"
+    content="Shivam Kokat, Python Developer, Full Stack Developer, React Developer, Django, Flask, AI, LLM, RAG, LangChain"
+  />
+
+  <title>Shivam Kokat | Full Stack Developer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --bg: #050816;
+      --bg2: #080d20;
+
+      --card: rgba(15, 23, 48, 0.72);
+      --card-solid: #0e1630;
+
+      --text: #f4f7ff;
+      --muted: #9aa8c2;
+
+      --blue: #4da3ff;
+      --cyan: #38d9ff;
+      --purple: #8b5cf6;
+      --pink: #d946ef;
+
+      --border: rgba(120, 145, 190, 0.18);
+
+      --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+      --gradient:
+        linear-gradient(
+          135deg,
+          #38d9ff,
+          #4d8dff,
+          #8b5cf6,
+          #d946ef
+        );
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(77, 163, 255, 0.10),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(139, 92, 246, 0.10),
+          transparent 30%
+        ),
+        linear-gradient(
+          180deg,
+          #040712 0%,
+          #070b1b 45%,
+          #050816 100%
+        );
+
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+
+    /* =========================================================
+       CUSTOM CURSOR
+    ========================================================= */
+
+    .cursor {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      mix-blend-mode: difference;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(77, 163, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition:
+        width .25s ease,
+        height .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+    }
+
+    body.cursor-hover .cursor-ring {
+      width: 60px;
+      height: 60px;
+      border-color: #8b5cf6;
+      background: rgba(139, 92, 246, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .cursor,
+      .cursor-ring {
+        display: none;
+      }
+    }
+
+
+    /* =========================================================
+       BACKGROUND
+    ========================================================= */
+
+    .background-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: .12;
+    }
+
+    .glow.one {
+      background: #2388ff;
+      top: -250px;
+      left: -200px;
+    }
+
+    .glow.two {
+      background: #8b5cf6;
+      top: 30%;
+      right: -300px;
+    }
+
+    .glow.three {
+      background: #d946ef;
+      bottom: -300px;
+      left: 30%;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(4, 7, 18, 0.65);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid transparent;
+
+      transition: .3s ease;
+    }
+
+    nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(4, 7, 18, 0.9);
+    }
+
+    .nav-inner {
+      height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: var(--gradient);
+
+      color: white;
+      font-size: 14px;
+
+      box-shadow:
+        0 0 25px rgba(77, 163, 255, .25);
+    }
+
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+
+      transition: .25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+
+      width: 0;
+      height: 2px;
+
+      transform: translateX(-50%);
+
+      background: var(--gradient);
+
+      transition: .3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: white;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 10px 17px;
+
+      border-radius: 9px;
+
+      background: var(--gradient);
+
+      color: white !important;
+
+      font-weight: 700 !important;
+
+      box-shadow:
+        0 10px 30px rgba(77, 163, 255, .15);
+
+      transition: .3s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 12px 35px rgba(139, 92, 246, .30);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 100px;
+
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 13px;
+
+      border-radius: 999px;
+
+      background: rgba(56, 217, 255, .06);
+      border: 1px solid rgba(56, 217, 255, .20);
+
+      color: #bcefff;
+
+      font-size: 12px;
+      font-weight: 600;
+
+      margin-bottom: 24px;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+
+      background: #38d996;
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 12px #38d996;
+
+      animation: pulse 1.7s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .45;
+        transform: scale(.7);
+      }
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(48px, 7vw, 82px);
+
+      line-height: .98;
+
+      letter-spacing: -4px;
+
+      max-width: 850px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      margin-top: 23px;
+
+      font-size: 19px;
+      color: #d4dbea;
+
+      max-width: 680px;
+    }
+
+    .hero-description {
+      margin-top: 16px;
+
+      color: var(--muted);
+
+      max-width: 700px;
+
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      padding: 13px 20px;
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      border: 0;
+
+      color: white;
+
+      box-shadow:
+        0 12px 35px rgba(77, 163, 255, .20);
+    }
+
+    .btn-primary:hover {
+      box-shadow:
+        0 18px 45px rgba(139, 92, 246, .30);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(77, 163, 255, .5);
+      background: rgba(77, 163, 255, .05);
+    }
+
+
+    /* =========================================================
+       HERO PROFILE VISUAL
+    ========================================================= */
+
+    .hero-visual {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 500px;
+    }
+
+    .orbit {
+      position: absolute;
+
+      width: 390px;
+      height: 390px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(77, 163, 255, .25);
+
+      animation: rotate 20s linear infinite;
+    }
+
+    .orbit::before {
+      content: "";
+
+      position: absolute;
+
+      width: 13px;
+      height: 13px;
+
+      top: 15px;
+      left: 55px;
+
+      border-radius: 50%;
+
+      background: #38d9ff;
+
+      box-shadow:
+        0 0 20px #38d9ff;
+    }
+
+    .orbit.two {
+      width: 320px;
+      height: 320px;
+
+      border-color: rgba(139, 92, 246, .28);
+
+      animation-duration: 15s;
+      animation-direction: reverse;
+    }
+
+    .orbit.two::before {
+      background: #8b5cf6;
+      box-shadow: 0 0 20px #8b5cf6;
+
+      top: auto;
+      left: auto;
+
+      right: 20px;
+      bottom: 45px;
+    }
+
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .profile-card {
+      width: 300px;
+      height: 380px;
+
+      position: relative;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      border-radius: 35px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(30, 45, 80, .9),
+          rgba(9, 14, 30, .95)
+        );
+
+      border: 1px solid rgba(120, 150, 200, .20);
+
+      box-shadow:
+        0 40px 90px rgba(0, 0, 0, .5),
+        0 0 80px rgba(77, 163, 255, .08);
+
+      overflow: hidden;
+
+      z-index: 2;
+    }
+
+    .profile-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(77, 163, 255, .35),
+          transparent 70%
+        );
+
+      top: -50px;
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+
+    .profile-icon {
+      width: 170px;
+      height: 170px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 90px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #172d54,
+          #0b142a
+        );
+
+      border: 1px solid rgba(100, 180, 255, .25);
+
+      box-shadow:
+        0 0 70px rgba(77, 163, 255, .18);
+    }
+
+    .profile-icon i {
+      font-size: 80px;
+
+      background: var(--gradient);
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .floating-card {
+      position: absolute;
+
+      padding: 12px 15px;
+
+      border-radius: 12px;
+
+      background: rgba(10, 18, 38, .85);
+
+      border: 1px solid var(--border);
+
+      backdrop-filter: blur(12px);
+
+      box-shadow: var(--shadow);
+
+      font-size: 12px;
+
+      z-index: 4;
+
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .floating-card i {
+      color: var(--cyan);
+      margin-right: 7px;
+    }
+
+    .float-one {
+      top: 90px;
+      left: 10px;
+    }
+
+    .float-two {
+      right: 5px;
+      bottom: 105px;
+
+      animation-delay: 1.5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+
+    /* =========================================================
+       SOCIALS
+    ========================================================= */
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      margin-top: 28px;
+
+      color: var(--muted);
+    }
+
+    .social-row a {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      transition: .25s ease;
+    }
+
+    .social-row a:hover {
+      color: white;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       STATS
+    ========================================================= */
+
+    .stats {
+      margin-top: 55px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      border: 1px solid var(--border);
+
+      background: rgba(10, 17, 36, .55);
+
+      backdrop-filter: blur(15px);
+
+      border-radius: 18px;
+
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 24px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat-number {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 30px;
+      font-weight: 700;
+
+      background: var(--gradient);
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+    .stat-title {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section {
+      padding: 110px 0;
+
+      border-bottom: 1px solid rgba(120, 145, 190, .10);
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 45px;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2.5px;
+
+      font-weight: 800;
+
+      margin-bottom: 12px;
+    }
+
+    .section-heading h2 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(35px, 5vw, 55px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+
+      margin-top: 15px;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+
+      gap: 20px;
+    }
+
+    .glass-card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(18, 29, 57, .75),
+          rgba(8, 14, 30, .70)
+        );
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      backdrop-filter: blur(14px);
+
+      box-shadow: var(--shadow);
+
+      transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(77, 163, 255, .30);
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, .35),
+        0 0 35px rgba(77, 163, 255, .06);
+    }
+
+    .about-text {
+      color: #c2ccdf;
+      font-size: 15px;
+    }
+
+    .about-text strong {
+      color: white;
+    }
+
+    .about-points {
+      margin-top: 25px;
+
+      display: grid;
+      gap: 13px;
+    }
+
+    .about-point {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      color: #c3cee2;
+
+      font-size: 14px;
+    }
+
+    .about-point i {
+      color: var(--cyan);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quick-box {
+      padding: 20px;
+
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, .025);
+
+      border: 1px solid var(--border);
+    }
+
+    .quick-box i {
+      font-size: 20px;
+
+      color: var(--blue);
+
+      margin-bottom: 10px;
+    }
+
+    .quick-box strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .quick-box span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+    .skill-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      background: rgba(77, 163, 255, .08);
+
+      filter: blur(60px);
+
+      right: -100px;
+      top: -100px;
+
+      pointer-events: none;
+    }
+
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+
+      margin-bottom: 20px;
+    }
+
+    .skill-icon {
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: rgba(77, 163, 255, .09);
+
+      color: var(--cyan);
+
+      border: 1px solid rgba(77, 163, 255, .15);
+    }
+
+    .skill-header h3 {
+      font-size: 17px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 7px 10px;
+
+      border-radius: 7px;
+
+      background: rgba(255, 255, 255, .035);
+
+      border: 1px solid var(--border);
+
+      color: #bdc9dd;
+
+      font-size: 12px;
+
+      transition: .25s ease;
+    }
+
+    .chip:hover {
+      color: white;
+
+      border-color: rgba(77, 163, 255, .35);
+
+      background: rgba(77, 163, 255, .08);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       AI FEATURE
+    ========================================================= */
+
+    .ai-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-box {
+      position: relative;
+
+      padding: 50px;
+
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(139, 92, 246, .18),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(56, 217, 255, .12),
+          transparent 35%
+        ),
+        rgba(10, 17, 36, .75);
+
+      border: 1px solid rgba(139, 92, 246, .20);
+
+      overflow: hidden;
+    }
+
+    .ai-box h3 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 32px;
+
+      max-width: 700px;
+    }
+
+    .ai-box p {
+      margin-top: 14px;
+
+      color: var(--muted);
+
+      max-width: 750px;
+    }
+
+    .ai-stack {
+      margin-top: 28px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .ai-pill {
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      background: rgba(139, 92, 246, .08);
+
+      border: 1px solid rgba(139, 92, 246, .20);
+
+      color: #d9d1ff;
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================= */
+
+    .projects-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .project-card {
+      min-height: 350px;
+
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 230px;
+      height: 230px;
+
+      border-radius: 50%;
+
+      background: rgba(77, 163, 255, .08);
+
+      filter: blur(60px);
+
+      top: -120px;
+      right: -100px;
+
+      transition: .4s ease;
+    }
+
+    .project-card:hover::before {
+      background: rgba(139, 92, 246, .16);
+
+      transform: scale(1.5);
+    }
+
+    .project-number {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 12px;
+
+      color: var(--cyan);
+
+      letter-spacing: 1px;
+
+      margin-bottom: 18px;
+    }
+
+    .project-icon {
+      width: 55px;
+      height: 55px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 15px;
+
+      background: var(--gradient);
+
+      font-size: 22px;
+
+      margin-bottom: 20px;
+
+      box-shadow:
+        0 10px 30px rgba(77, 163, 255, .18);
+    }
+
+    .project-card h3 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 24px;
+
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      max-width: 600px;
+    }
+
+    .project-tech {
+      margin-top: auto;
+
+      padding-top: 25px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+    }
+
+    .project-tech span {
+      font-size: 11px;
+
+      color: #b9c7dd;
+
+      padding: 6px 9px;
+
+      border-radius: 7px;
+
+      background: rgba(255, 255, 255, .035);
+
+      border: 1px solid var(--border);
+    }
+
+    .project-link {
+      position: absolute;
+
+      top: 25px;
+      right: 25px;
+
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: rgba(255, 255, 255, .035);
+
+      border: 1px solid var(--border);
+
+      color: var(--muted);
+
+      transition: .3s ease;
+    }
+
+    .project-link:hover {
+      color: white;
+
+      background: rgba(77, 163, 255, .12);
+
+      border-color: rgba(77, 163, 255, .3);
+
+      transform: rotate(8deg);
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience {
+      position: relative;
+
+      border-left: 1px solid rgba(77, 163, 255, .25);
+
+      padding-left: 35px;
+
+      margin-left: 10px;
+    }
+
+    .experience-item {
+      position: relative;
+
+      margin-bottom: 42px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-item::before {
+      content: "";
+
+      position: absolute;
+
+      width: 12px;
+      height: 12px;
+
+      border-radius: 50%;
+
+      background: #38d9ff;
+
+      box-shadow:
+        0 0 20px rgba(56, 217, 255, .8);
+
+      left: -42px;
+      top: 7px;
+    }
+
+    .experience-date {
+      display: inline-block;
+
+      color: var(--cyan);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      margin-bottom: 7px;
+    }
+
+    .experience-item h3 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 21px;
+    }
+
+    .experience-company {
+      color: #c2cce0;
+
+      font-size: 14px;
+
+      margin-top: 3px;
+    }
+
+    .experience-item p {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      max-width: 800px;
+
+      margin-top: 12px;
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .education-card i {
+      font-size: 22px;
+
+      color: var(--purple);
+
+      margin-bottom: 18px;
+    }
+
+    .education-card h3 {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .education-card p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin-top: 8px;
+    }
+
+    .education-year {
+      color: var(--cyan) !important;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-box {
+      text-align: center;
+
+      padding: 65px 30px;
+
+      border-radius: 25px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(77, 163, 255, .12),
+          transparent 40%
+        ),
+        rgba(10, 17, 36, .75);
+
+      border: 1px solid var(--border);
+    }
+
+    .contact-box h2 {
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: clamp(35px, 5vw, 58px);
+
+      letter-spacing: -2px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin: 15px auto 0;
+    }
+
+    .contact-buttons {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .contact-details {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 25px;
+
+      margin-top: 30px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    .contact-details a {
+      transition: .25s ease;
+    }
+
+    .contact-details a:hover {
+      color: white;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 30px 0;
+
+      color: #73809a;
+
+      font-size: 12px;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       SCROLL TOP
+    ========================================================= */
+
+    .scroll-top {
+      position: fixed;
+
+      right: 25px;
+      bottom: 25px;
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background: rgba(15, 25, 50, .9);
+
+      border: 1px solid var(--border);
+
+      color: white;
+
+      cursor: pointer;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(15px);
+
+      transition: .3s ease;
+
+      z-index: 100;
+    }
+
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      background: var(--gradient);
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(30px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description,
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons,
+      .social-row {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+
+      .nav-links {
+        position: absolute;
+
+        top: 76px;
+        left: 4%;
+        right: 4%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        border-radius: 15px;
+
+        background: rgba(7, 12, 28, .97);
+
+        border: 1px solid var(--border);
+
+        gap: 18px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 51px;
+
+        letter-spacing: -2.8px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ai-box {
+        padding: 30px 24px;
+      }
+
+      .profile-card {
+        width: 260px;
+        height: 340px;
+      }
+
+      .orbit {
+        width: 330px;
+        height: 330px;
+      }
+
+      .orbit.two {
+        width: 270px;
+        height: 270px;
+      }
+
+      .float-one {
+        left: 0;
+      }
+
+      .float-two {
+        right: 0;
+      }
+    }
+
+
+    @media (max-width: 520px) {
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+      }
+
+      .experience {
+        padding-left: 25px;
+      }
+
+      .experience-item::before {
+        left: -32px;
+      }
+
+      .contact-box {
+        padding: 45px 20px;
+      }
+    }
+
+  </style>
 </head>
+
+
 <body>
-<nav><div class="wrap nav"><a class="logo" href="#home">Shivam<span>.</span></a><div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero" id="home"><div class="wrap">
-<div class="pill">Python Full Stack Developer · AI / LLM · DevOps</div>
-<h1>Building <span class="grad">scalable software</span> that solves real business problems.</h1>
-<p>I'm Shivam Kokat, a Python Full Stack Developer focused on backend engineering, REST APIs, microservices, modern frontends, cloud deployment and practical AI/LLM applications.</p>
-<div class="buttons"><a class="btn primary" href="#projects">View Projects</a><a class="btn" href="mailto:shivamkokat16@gmail.com">Email Me</a><a class="btn" href="https://github.com/Shivam2802-AI" target="_blank" rel="noopener">GitHub ↗</a></div>
-</div></header>
+  <!-- =======================================================
+       BACKGROUND
+  ======================================================== -->
 
-<section id="about"><div class="wrap"><div class="eyebrow">About Me</div><h2>Engineering with a full-stack mindset.</h2>
-<div class="about"><div class="card"><p>Backend Developer with 3+ years of experience building and scaling Python web applications using Flask and Django, with Angular, TypeScript and React on the frontend. Skilled in RESTful APIs, microservices architecture, PostgreSQL/MySQL optimization, Docker, Jenkins and Azure CI/CD. Familiar with Generative AI, Machine Learning, LLMs, RAG, Prompt Engineering and Ollama.</p></div>
-<div class="stats"><div class="card stat"><strong>3+</strong><span>Years experience</span></div><div class="card stat"><strong>Python</strong><span>Core backend</span></div><div class="card stat"><strong>Full Stack</strong><span>Backend + frontend</span></div><div class="card stat"><strong>AI / Cloud</strong><span>Modern technologies</span></div></div></div></div></section>
+  <div class="background-glow">
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div class="glow three"></div>
+  </div>
 
-<section id="skills"><div class="wrap"><div class="eyebrow">Technical Skills</div><h2>Complete technology stack</h2><p class="lead">Skills from my professional CV, organized by engineering area.</p>
-<div class="skills">
-<div class="card skill"><h3>Backend Development</h3><div class="chips"><span>Python</span><span>Flask</span><span>Django</span><span>Django ORM</span><span>RESTful API Design</span><span>Microservices Architecture</span><span>JWT</span><span>OAuth</span></div></div>
-<div class="card skill"><h3>Frontend Development</h3><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>Angular</span><span>React</span></div></div>
-<div class="card skill"><h3>Databases</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>SQLite</span><span>MongoDB</span></div></div>
-<div class="card skill"><h3>DevOps & Cloud</h3><div class="chips"><span>Docker</span><span>Jenkins</span><span>Git / GitHub</span><span>Azure CI/CD</span><span>Azure Cloud</span><span>AWS</span></div></div>
-<div class="card skill"><h3>AI / ML & Modern Tech</h3><div class="chips"><span>Generative AI</span><span>Machine Learning</span><span>LLMs</span><span>RAG</span><span>Prompt Engineering</span><span>Ollama</span><span>Kubernetes</span><span>Celery</span><span>Redis</span></div></div>
-<div class="card skill"><h3>Tools & Practices</h3><div class="chips"><span>Postman</span><span>Linux</span><span>Data Structures & Algorithms</span><span>Agile Methodologies</span><span>CDN Concepts</span></div></div>
-</div></div></section>
 
-<section id="projects"><div class="wrap"><div class="eyebrow">Selected Projects</div><h2>Projects that show real-world engineering.</h2>
-<div class="projects">
-<div class="card project"><h3>Mahanidhi Loan Application</h3><p>Microservices-based lending application for web and Android. Built customer onboarding and loan-processing APIs, coordinated independent service deployments, integrated third-party services and supported logging/monitoring.</p><div class="tags">Python · Django · Flask · React · PostgreSQL · Docker · Microservices · CI/CD · REST APIs</div></div>
-<div class="card project"><h3>Cab Service Provider</h3><p>Backend system integrating cab payments with Mahindra Finance's loan collection process. Built optimized APIs, PostgreSQL schemas and React features, with Jenkins and Docker deployment workflows.</p><div class="tags">Python · Django · React · PostgreSQL · Jenkins · Docker · REST APIs</div></div>
-<div class="card project"><h3>AI / LLM Applications</h3><p>Exploring practical Generative AI solutions using LLMs, RAG, prompt engineering and Ollama, with a focus on scalable and production-ready application patterns.</p><div class="tags">GenAI · ML · LLMs · RAG · Prompt Engineering · Ollama</div></div>
-</div></div></section>
+  <!-- CUSTOM CURSOR -->
 
-<section id="experience"><div class="wrap"><div class="eyebrow">Experience & Education</div><h2>Professional journey</h2>
-<div class="timeline">
-<div class="item"><div class="meta">May 2023 – Present · Pune, Maharashtra</div><h3>Python Developer — Gavkari Agro Producer Company Limited</h3><p>Developed scalable Python/Flask/Django services, secure REST APIs, admin workflows, database optimizations and deployment workflows using Git/GitHub, Docker and Jenkins.</p></div>
-<div class="item"><div class="meta">Aug 2023 – Jun 2026 · Georai, Maharashtra</div><h3>B.Sc. in Computer Science (IT)</h3><p>Computer Science education with a focus on software development and technology foundations.</p></div>
-<div class="item"><div class="meta">Jun 2020 – May 2021 · Shevgaon, Maharashtra</div><h3>HSC — SB High School</h3><p>Percentage: 88.50%</p></div>
-<div class="item"><div class="meta">Jun 2018 – May 2019 · Georai, Maharashtra</div><h3>SSC — Shiv Sharda Public School</h3><p>Percentage: 83.40%</p></div>
-</div></div></section>
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
 
-<section id="contact"><div class="wrap"><div class="eyebrow">Contact</div><h2>Let's build something useful.</h2><p class="lead">For freelance opportunities, software development work and collaborations, reach me directly.</p>
-<div class="contacts">
-<div class="card contact"><small>GitHub</small><a href="https://github.com/Shivam2802-AI" target="_blank" rel="noopener">https://github.com/Shivam2802-AI ↗</a></div>
-<div class="card contact"><small>LinkedIn</small><a href="https://www.linkedin.com/in/shivam-kokat2" target="_blank" rel="noopener">https://www.linkedin.com/in/shivam-kokat2 ↗</a></div>
-<div class="card contact"><small>Email</small><a href="mailto:shivamkokat16@gmail.com">shivamkokat16@gmail.com ↗</a></div>
-<div class="card contact"><small>Location</small><a href="#contact">Pune, Maharashtra, India</a></div>
-</div></div></section>
 
-<footer>© 2026 Shivam Kokat · Python Full Stack Developer</footer>
-</body></html>
+  <!-- =======================================================
+       NAVBAR
+  ======================================================== -->
+
+  <nav id="navbar">
+
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo hover-target">
+
+        <div class="logo-mark">
+          <i class="fa-solid fa-code"></i>
+        </div>
+
+        Shivam<span>.</span>
+
+      </a>
+
+
+      <div class="nav-links" id="navLinks">
+
+        <a href="#home" class="active hover-target">Home</a>
+
+        <a href="#about" class="hover-target">About</a>
+
+        <a href="#skills" class="hover-target">Skills</a>
+
+        <a href="#projects" class="hover-target">Projects</a>
+
+        <a href="#experience" class="hover-target">Experience</a>
+
+        <a href="#contact" class="hover-target">Contact</a>
+
+      </div>
+
+
+      <a href="#contact" class="nav-cta hover-target">
+        Hire Me
+      </a>
+
+
+      <button
+        class="mobile-menu hover-target"
+        id="mobileMenu"
+        aria-label="Open Menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero" id="home">
+
+    <div class="container hero-grid">
+
+
+      <div class="hero-content reveal">
+
+        <div class="availability">
+
+          <span class="availability-dot"></span>
+
+          Available for Freelance and Software Development Opportunities
+
+        </div>
+
+
+        <h1>
+
+          Hello, I am
+
+          <span class="gradient-text">
+            Shivam Kokat.
+          </span>
+
+        </h1>
+
+
+        <div class="hero-subtitle">
+
+          Full Stack Developer
+
+          <span class="gradient-text">
+            · AI / LLM Practitioner
+          </span>
+
+        </div>
+
+
+        <p class="hero-description">
+
+          I develop production-ready web applications using
+          React.js, Next.js, Python, Flask and Django —
+          with a strong focus on microservices, REST APIs,
+          AI/LLM applications, cloud deployment and scalable
+          system architecture.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#projects"
+            class="btn btn-primary hover-target"
+          >
+            <i class="fa-solid fa-arrow-down"></i>
+            Explore My Work
+          </a>
+
+
+          <a
+            href="https://drive.google.com/file/d/1IwNF3fV0RAosKWjFDileOrIKYkl5MOd1/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline hover-target"
+          >
+            <i class="fa-solid fa-file-arrow-down"></i>
+            View Resume
+          </a>
+
+
+          <a
+            href="mailto:shivamkokat16@gmail.com"
+            class="btn btn-outline hover-target"
+          >
+            <i class="fa-regular fa-envelope"></i>
+            Get in Touch
+          </a>
+
+        </div>
+
+
+        <div class="social-row">
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="hover-target"
+          >
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/shivam-kokat2"
+            target="_blank"
+            rel="noopener"
+            class="hover-target"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
+
+
+          <a
+            href="mailto:shivamkokat16@gmail.com"
+            class="hover-target"
+          >
+            <i class="fa-regular fa-envelope"></i>
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO VISUAL -->
+
+      <div class="hero-visual reveal">
+
+        <div class="orbit"></div>
+        <div class="orbit two"></div>
+
+
+        <div class="profile-card">
+
+          <div class="profile-icon">
+
+            <i class="fa-solid fa-user-tie"></i>
+
+          </div>
+
+        </div>
+
+
+        <div class="floating-card float-one">
+
+          <i class="fa-brands fa-python"></i>
+
+          Python · Django · Flask
+
+        </div>
+
+
+        <div class="floating-card float-two">
+
+          <i class="fa-solid fa-brain"></i>
+
+          AI · LLM · RAG
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       STATS
+  ======================================================== -->
+
+  <div class="container">
+
+    <div class="stats reveal">
+
+      <div class="stat">
+
+        <div class="stat-number">
+          3+
+        </div>
+
+        <div class="stat-title">
+          Years of Experience
+        </div>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-number">
+          Full Stack
+        </div>
+
+        <div class="stat-title">
+          Frontend and Backend Engineering
+        </div>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-number">
+          AI / LLM
+        </div>
+
+        <div class="stat-title">
+          Modern AI Applications
+        </div>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div class="stat-number">
+          Cloud
+        </div>
+
+        <div class="stat-title">
+          Docker · Kubernetes · Azure
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =======================================================
+       ABOUT
+  ======================================================== -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="eyebrow">
+          About Me
+        </div>
+
+        <h2>
+          Engineering with a
+          <span class="gradient-text">
+            full-stack perspective.
+          </span>
+        </h2>
+
+        <p>
+          I translate business requirements into
+          scalable, high-quality software products.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <div class="glass-card reveal">
+
+          <p class="about-text">
+
+            I am a <strong>Full Stack Developer</strong> with
+            3+ years of hands-on experience building
+            production-grade applications.
+
+            <br><br>
+
+            My core development experience includes
+            <strong>React.js, Next.js, Python, Flask and Django</strong>,
+            with strong knowledge of REST APIs, microservices,
+            databases and system design.
+
+            <br><br>
+
+            I also develop
+            <strong>AI-driven applications</strong> using
+            Large Language Models, LangChain, LangGraph,
+            RAG pipelines and conversational agents.
+
+          </p>
+
+
+          <div class="about-points">
+
+            <div class="about-point">
+
+              <i class="fa-solid fa-check"></i>
+
+              Production-grade Full Stack Applications
+
+            </div>
+
+
+            <div class="about-point">
+
+              <i class="fa-solid fa-check"></i>
+
+              REST APIs & Microservices
+
+            </div>
+
+
+            <div class="about-point">
+
+              <i class="fa-solid fa-check"></i>
+
+              AI / LLM / RAG Applications
+
+            </div>
+
+
+            <div class="about-point">
+
+              <i class="fa-solid fa-check"></i>
+
+              Docker, Kubernetes & CI/CD
+
+            </div>
+
+
+            <div class="about-point">
+
+              <i class="fa-solid fa-check"></i>
+
+              Azure Cloud Deployment
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="glass-card reveal">
+
+          <div class="quick-grid">
+
+
+            <div class="quick-box">
+
+              <i class="fa-brands fa-python"></i>
+
+              <strong>Python</strong>
+
+              <span>
+                Core Backend
+              </span>
+
+            </div>
+
+
+            <div class="quick-box">
+
+              <i class="fa-brands fa-react"></i>
+
+              <strong>React</strong>
+
+              <span>
+                Frontend
+              </span>
+
+            </div>
+
+
+            <div class="quick-box">
+
+              <i class="fa-solid fa-brain"></i>
+
+              <strong>AI / LLM</strong>
+
+              <span>
+                Generative AI Applications
+              </span>
+
+            </div>
+
+
+            <div class="quick-box">
+
+              <i class="fa-brands fa-docker"></i>
+
+              <strong>DevOps</strong>
+
+              <span>
+                Docker / CI/CD
+              </span>
+
+            </div>
+
+
+            <div class="quick-box">
+
+              <i class="fa-solid fa-database"></i>
+
+              <strong>Database</strong>
+
+              <span>
+                SQL / NoSQL
+              </span>
+
+            </div>
+
+
+            <div class="quick-box">
+
+              <i class="fa-solid fa-cloud"></i>
+
+              <strong>Cloud</strong>
+
+              <span>
+                Azure
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       SKILLS
+  ======================================================== -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="eyebrow">
+          Technical Skills
+        </div>
+
+        <h2>
+          Professional Technology
+          <span class="gradient-text">
+            stack.
+          </span>
+        </h2>
+
+        <p>
+          Technologies and engineering concepts from my
+          professional experience.
+        </p>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+
+        <!-- BACKEND -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+
+            <h3>
+              Backend Development
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">Python</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Django</span>
+            <span class="chip">Django ORM</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">Microservices</span>
+            <span class="chip">JWT</span>
+            <span class="chip">OAuth</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- FRONTEND -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+
+            <h3>
+              Frontend Development
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">React.js</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Bootstrap</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- AI -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>
+              AI & LLM
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">LLMs</span>
+            <span class="chip">LangChain</span>
+            <span class="chip">LangGraph</span>
+            <span class="chip">RAG</span>
+            <span class="chip">Vector Databases</span>
+            <span class="chip">AI Agents</span>
+            <span class="chip">Prompt Engineering</span>
+            <span class="chip">Voice Bots</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- DATABASE -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h3>
+              Databases
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">MySQL</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Mongoose</span>
+            <span class="chip">SQLite</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- DEVOPS -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+
+            <h3>
+              DevOps & Cloud
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Jenkins</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Azure</span>
+            <span class="chip">Azure DevOps</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- TOOLS -->
+
+        <div class="glass-card skill-card reveal">
+
+          <div class="skill-header">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+
+            <h3>
+              Tools & Concepts
+            </h3>
+
+          </div>
+
+
+          <div class="chips">
+
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Postman</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Kibana</span>
+            <span class="chip">SonarQube</span>
+            <span class="chip">DSA</span>
+            <span class="chip">OOP</span>
+            <span class="chip">System Design</span>
+            <span class="chip">Agile</span>
+            <span class="chip">Scrum</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       AI
+  ======================================================== -->
+
+  <section class="ai-section">
+
+    <div class="container">
+
+      <div class="ai-box reveal">
+
+        <div class="eyebrow">
+          AI / LLM
+        </div>
+
+        <h3>
+          Building practical
+          <span class="gradient-text">
+            AI-powered applications.
+          </span>
+        </h3>
+
+        <p>
+
+          My AI work focuses on turning LLM capabilities
+          into useful software — including RAG pipelines,
+          recommendation systems, conversational workflows,
+          AI agents and grounded responses.
+
+        </p>
+
+
+        <div class="ai-stack">
+
+          <span class="ai-pill">
+            Large Language Models
+          </span>
+
+          <span class="ai-pill">
+            LangChain
+          </span>
+
+          <span class="ai-pill">
+            LangGraph
+          </span>
+
+          <span class="ai-pill">
+            RAG
+          </span>
+
+          <span class="ai-pill">
+            Vector Databases
+          </span>
+
+          <span class="ai-pill">
+            AI Agents
+          </span>
+
+          <span class="ai-pill">
+            Prompt Engineering
+          </span>
+
+          <span class="ai-pill">
+            Voice Bots
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       PROJECTS
+  ======================================================== -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="eyebrow">
+          Selected Projects
+        </div>
+
+        <h2>
+          Selected Work I Have
+          <span class="gradient-text">
+            built.
+          </span>
+        </h2>
+
+        <p>
+          Selected projects demonstrating full-stack,
+          backend and artificial intelligence expertise.
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="glass-card project-card reveal">
+
+          <div class="project-number">
+            01 / AI PLATFORM
+          </div>
+
+          <div class="project-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+
+          <h3>
+            AI-Powered Career Counseling Platform
+          </h3>
+
+          <p>
+
+            AI-driven career counselling platform that
+            analyzes student marks, category and preferences
+            against historical cutoff data to recommend
+            suitable colleges and courses.
+
+            Built with rule-based eligibility filtering,
+            RAG, LLMs and multi-turn conversational workflows.
+
+          </p>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Flask</span>
+            <span>React</span>
+            <span>LangChain</span>
+            <span>LangGraph</span>
+            <span>RAG</span>
+            <span>PostgreSQL</span>
+
+          </div>
+
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="project-link hover-target"
+            title="View GitHub"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="glass-card project-card reveal">
+
+          <div class="project-number">
+            02 / FULL STACK
+          </div>
+
+          <div class="project-icon">
+            <i class="fa-solid fa-car"></i>
+          </div>
+
+          <h3>
+            Cab Service Management System
+          </h3>
+
+          <p>
+
+            Full-stack cab booking platform handling
+            ride requests, fare computation, real-time
+            tracking and driver-rider coordination.
+
+            Includes authentication, authorization,
+            dashboards, booking state management and
+            optimized database operations.
+
+          </p>
+
+
+          <div class="project-tech">
+
+            <span>React</span>
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Django</span>
+            <span>FastAPI</span>
+            <span>MySQL</span>
+            <span>REST APIs</span>
+
+          </div>
+
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="project-link hover-target"
+            title="View GitHub"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="glass-card project-card reveal">
+
+          <div class="project-number">
+            03 / AI ENGINEERING
+          </div>
+
+          <div class="project-icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+
+          <h3>
+            AI / LLM Applications
+          </h3>
+
+          <p>
+
+            Developing practical AI applications using
+            Large Language Models, retrieval-augmented
+            generation, prompt engineering, vector databases
+            and conversational agents.
+
+          </p>
+
+
+          <div class="project-tech">
+
+            <span>LLMs</span>
+            <span>RAG</span>
+            <span>LangChain</span>
+            <span>LangGraph</span>
+            <span>AI Agents</span>
+            <span>Vector DB</span>
+
+          </div>
+
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="project-link hover-target"
+            title="View GitHub"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+
+        <div class="glass-card project-card reveal">
+
+          <div class="project-number">
+            04 / BACKEND
+          </div>
+
+          <div class="project-icon">
+            <i class="fa-solid fa-server"></i>
+          </div>
+
+          <h3>
+            Microservices & REST APIs
+          </h3>
+
+          <p>
+
+            Designed scalable backend services using
+            Python, Flask and Django with RESTful APIs,
+            authentication, role-based access control,
+            database optimization and deployment automation.
+
+          </p>
+
+
+          <div class="project-tech">
+
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Django</span>
+            <span>REST APIs</span>
+            <span>JWT</span>
+            <span>PostgreSQL</span>
+            <span>Docker</span>
+            <span>Jenkins</span>
+
+          </div>
+
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="project-link hover-target"
+            title="View GitHub"
+          >
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       EXPERIENCE
+  ======================================================== -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="eyebrow">
+          Experience
+        </div>
+
+        <h2>
+          My Professional
+          <span class="gradient-text">
+            journey.
+          </span>
+        </h2>
+
+      </div>
+
+
+      <div class="experience">
+
+
+        <div class="experience-item reveal">
+
+          <span class="experience-date">
+            Mar 2023 — Present
+          </span>
+
+          <h3>
+            Full Stack Developer
+          </h3>
+
+          <div class="experience-company">
+            Gavkari Agro Producer Company Limited · Pune, Maharashtra
+          </div>
+
+          <p>
+
+            Engineered scalable full-stack applications
+            using React and Python, Flask and Django.
+            Designed secure REST APIs and microservices,
+            optimized databases, implemented authentication
+            and RBAC, and automated deployment workflows
+            using Docker and Jenkins CI/CD.
+
+          </p>
+
+        </div>
+
+
+        <div class="experience-item reveal">
+
+          <span class="experience-date">
+            Sep 2024 — Present
+          </span>
+
+          <h3>
+            AI Career Counselling Platform
+          </h3>
+
+          <div class="experience-company">
+            AI / LLM Project
+          </div>
+
+          <p>
+
+            Built recommendation logic, RAG pipelines,
+            LLM integrations and multi-turn counselling
+            workflows using LangChain and LangGraph,
+            supported by Flask APIs and a React interface.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       EDUCATION
+  ======================================================== -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-heading reveal">
+
+        <div class="eyebrow">
+          Education
+        </div>
+
+        <h2>
+          Academic
+          <span class="gradient-text">
+            foundation.
+          </span>
+        </h2>
+
+      </div>
+
+
+      <div class="education-grid">
+
+
+        <div class="glass-card education-card reveal">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+          <h3>
+            B.Sc. in Computer Science (IT)
+          </h3>
+
+          <p>
+            R.B. Attal Arts, Science and Commerce College
+            · Georai, Maharashtra
+          </p>
+
+          <p class="education-year">
+            2023 — 2026 · CGPA: 7.31
+          </p>
+
+        </div>
+
+
+        <div class="glass-card education-card reveal">
+
+          <i class="fa-solid fa-school"></i>
+
+          <h3>
+            HSC
+          </h3>
+
+          <p>
+            Sant Bhagwan Baba Secondary &
+            Higher Secondary School
+          </p>
+
+          <p class="education-year">
+            2020 — 2021 · 88.50%
+          </p>
+
+        </div>
+
+
+        <div class="glass-card education-card reveal">
+
+          <i class="fa-solid fa-book"></i>
+
+          <h3>
+            SSC
+          </h3>
+
+          <p>
+            Shiv Sharda Public High School,
+            Georai, Maharashtra
+          </p>
+
+          <p class="education-year">
+            2018 — 2019 · 83.40%
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       CONTACT
+  ======================================================== -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box reveal">
+
+        <div class="eyebrow">
+          Contact
+        </div>
+
+        <h2>
+          Let Us Build Something
+          <span class="gradient-text">
+            useful.
+          </span>
+        </h2>
+
+        <p>
+
+          I am open to software development opportunities,
+          freelance projects, and strategic collaborations.
+
+          I welcome the opportunity to discuss how we can create
+          meaningful and valuable solutions.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+          <a
+            href="mailto:shivamkokat16@gmail.com"
+            class="btn btn-primary hover-target"
+          >
+            <i class="fa-regular fa-envelope"></i>
+            Send an Email
+          </a>
+
+
+          <a
+            href="https://github.com/Shivam2802-AI"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline hover-target"
+          >
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/shivam-kokat2"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline hover-target"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
+
+        </div>
+
+
+        <div class="contact-details">
+
+          <a
+            href="mailto:shivamkokat16@gmail.com"
+            class="hover-target"
+          >
+            <i class="fa-regular fa-envelope"></i>
+            shivamkokat16@gmail.com
+          </a>
+
+
+          <span>
+            <i class="fa-solid fa-location-dot"></i>
+            Pune, Maharashtra, India
+          </span>
+
+
+          <span>
+            <i class="fa-solid fa-phone"></i>
+            8830710200
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 Shivam Kokat · Full Stack Developer · AI / LLM
+
+    </div>
+
+  </footer>
+
+
+  <!-- SCROLL TOP -->
+
+  <button
+    class="scroll-top hover-target"
+    id="scrollTop"
+    aria-label="Scroll to top"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =========================================================
+       CUSTOM CURSOR
+    ========================================================= */
+
+    const cursor = document.querySelector(".cursor");
+    const cursorRing = document.querySelector(".cursor-ring");
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let ringX = 0;
+    let ringY = 0;
+
+
+    document.addEventListener("mousemove", (e) => {
+
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      cursor.style.left = mouseX + "px";
+      cursor.style.top = mouseY + "px";
+
+    });
+
+
+    function animateCursor() {
+
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+
+      cursorRing.style.left = ringX + "px";
+      cursorRing.style.top = ringY + "px";
+
+      requestAnimationFrame(animateCursor);
+
+    }
+
+    animateCursor();
+
+
+    /* =========================================================
+       CURSOR HOVER
+    ========================================================= */
+
+    document.querySelectorAll(".hover-target").forEach((element) => {
+
+      element.addEventListener("mouseenter", () => {
+
+        document.body.classList.add("cursor-hover");
+
+      });
+
+
+      element.addEventListener("mouseleave", () => {
+
+        document.body.classList.remove("cursor-hover");
+
+      });
+
+    });
+
+
+    /* =========================================================
+       NAVBAR SCROLL
+    ========================================================= */
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+
+        navbar.classList.add("scrolled");
+
+      } else {
+
+        navbar.classList.remove("scrolled");
+
+      }
+
+    });
+
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    mobileMenu.addEventListener("click", () => {
+
+      navLinks.classList.toggle("open");
+
+      const icon =
+        mobileMenu.querySelector("i");
+
+      if (navLinks.classList.contains("open")) {
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      } else {
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
+
+    });
+
+
+    /* CLOSE MOBILE MENU */
+
+    document.querySelectorAll(".nav-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          const icon =
+            mobileMenu.querySelector("i");
+
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+
+        });
+
+      });
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach((element) => {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+    ========================================================= */
+
+    const sections =
+      document.querySelectorAll("section, header");
+
+    const navItems =
+      document.querySelectorAll(".nav-links a");
+
+
+    window.addEventListener("scroll", () => {
+
+      let current = "";
+
+      sections.forEach((section) => {
+
+        const sectionTop =
+          section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+
+          current = section.getAttribute("id");
+
+        }
+
+      });
+
+
+      navItems.forEach((link) => {
+
+        link.classList.remove("active");
+
+        if (
+          link.getAttribute("href") === "#" + current
+        ) {
+
+          link.classList.add("active");
+
+        }
+
+      });
+
+    });
+
+
+    /* =========================================================
+       SCROLL TO TOP
+    ========================================================= */
+
+    const scrollTop =
+      document.getElementById("scrollTop");
+
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+
+        scrollTop.classList.add("show");
+
+      } else {
+
+        scrollTop.classList.remove("show");
+
+      }
+
+    });
+
+
+    scrollTop.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* =========================================================
+       3D CARD EFFECT
+    ========================================================= */
+
+    document.querySelectorAll(".project-card")
+      .forEach((card) => {
+
+        card.addEventListener("mousemove", (e) => {
+
+          const rect =
+            card.getBoundingClientRect();
+
+          const x =
+            e.clientX - rect.left;
+
+          const y =
+            e.clientY - rect.top;
+
+          const rotateX =
+            ((y / rect.height) - .5) * -4;
+
+          const rotateY =
+            ((x / rect.width) - .5) * 4;
+
+          card.style.transform =
+            `perspective(900px)
+             rotateX(${rotateX}deg)
+             rotateY(${rotateY}deg)
+             translateY(-5px)`;
+
+        });
+
+
+        card.addEventListener("mouseleave", () => {
+
+          card.style.transform =
+            "perspective(900px) rotateX(0) rotateY(0) translateY(0)";
+
+        });
+
+      });
+
+
+    /* =========================================================
+       BUTTON RIPPLE
+    ========================================================= */
+
+    document.querySelectorAll(".btn")
+      .forEach((button) => {
+
+        button.addEventListener("click", function(e) {
+
+          const ripple =
+            document.createElement("span");
+
+          ripple.style.position = "absolute";
+
+          ripple.style.width = "10px";
+          ripple.style.height = "10px";
+
+          ripple.style.borderRadius = "50%";
+
+          ripple.style.background =
+            "rgba(255,255,255,.35)";
+
+          ripple.style.pointerEvents = "none";
+
+          ripple.style.left =
+            e.offsetX + "px";
+
+          ripple.style.top =
+            e.offsetY + "px";
+
+          ripple.style.transform =
+            "translate(-50%,-50%) scale(0)";
+
+          ripple.style.animation =
+            "ripple .6s linear";
+
+          this.style.position = "relative";
+          this.style.overflow = "hidden";
+
+          this.appendChild(ripple);
+
+          setTimeout(() => {
+
+            ripple.remove();
+
+          }, 600);
+
+        });
+
+      });
+
+
+    /* =========================================================
+       RIPPLE CSS
+    ========================================================= */
+
+    const rippleStyle =
+      document.createElement("style");
+
+    rippleStyle.innerHTML = `
+
+      @keyframes ripple {
+
+        to {
+
+          transform:
+            translate(-50%,-50%) scale(25);
+
+          opacity: 0;
+
+        }
+
+      }
+
+    `;
+
+    document.head.appendChild(rippleStyle);
+
+
+  </script>
+
+</body>
+
+</html>
